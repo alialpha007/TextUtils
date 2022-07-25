@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
+
 function TextForm() {
 
   // Here setText will set the new value to the text
@@ -22,15 +23,20 @@ function TextForm() {
     setText(upperCaseText)
   }
 
-  const handleOnClickTitle = (word)=>{
-    let titleCase = text.split(' ')
-   .map(word => word[0].toUpperCase() + word.substring(1).toLowerCase())
-   .join(' ');
-   setText(titleCase)
+  const handleOnClickTitle = ()=>{
+
+    if(text === ""){
+       alert("Text must be filled out");
+    }else
+    {
+  let titleCase = text.split(' ').map(word => word[0].toUpperCase() + word.substring(1).toLowerCase()).join(' ');
+setText(titleCase)
   
   }
+   
+  }
 
-  const handleOnClickSentence = (word)=>{
+  const handleOnClickSentence = ()=>{
    let sentenceCase = text.toLowerCase().replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, 
     s => s.replace(/([a-z])/,s => s.toUpperCase()))    
    setText(sentenceCase)
@@ -61,6 +67,13 @@ function TextForm() {
    window.speechSynthesis.cancel(speech);
   }
 
+  const handleOnClickCopy = ()=>{
+  let text = document.getElementById("textarea")
+  text.select()
+  text.setSelectionRange(0, 9999)
+  navigator.clipboard.writeText(text.value)
+    
+  }
 
 
 
@@ -71,17 +84,28 @@ function TextForm() {
           <h2 className='text-center'>Enter text to analyze</h2>
         <Form.Group className="card-body" controlId="exampleForm.ControlTextarea1">
 
-          <Form.Control
+<>
+        <Form.Control className='overflow-auto'
+          id='textarea'
             as="textarea"
             rows={7}
             value={text}
-            onChange={handleOnChangeText} //Event handling
-           
+            onChange={handleOnChangeText}
           />
 
+        <span id='copyButton' onClick={handleOnClickCopy} className='cursor-pointer' >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-clipboard" viewBox="0 0 16 16">
+          <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+          <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+        </svg>
+        </span>
+
+        <span id='copy'>copy</span>
+
+</>
         </Form.Group>
 
-        <div className='p-4 text-center '>
+        <div className='text-center '>
 
         <Button className="m-2 w-30 "
           variant="primary"
@@ -132,6 +156,7 @@ function TextForm() {
         </div>
 
       </Form>
+ 
     </div>
 
     <div className="container m-5 p-3 card">

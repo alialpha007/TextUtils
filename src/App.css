@@ -1,3 +1,23 @@
 button{
   width:11.6rem;
 }
+
+#copyButton{
+  cursor: pointer;
+  color: black;
+
+}
+
+#copyButton:hover + #copy{
+  background-color: #00000000;
+  display: inline-block;
+    
+}
+
+/* hover show text */
+#copy{
+  display: none;
+  padding-left: 0.5%;
+  background-color: #00000000;
+  color: rgb(168, 168, 168);
+}
