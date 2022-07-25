@@ -1,21 +1,29 @@
-button{
-  width:11.6rem;
+/* remove outline of text area box */
+
+#textarea:focus,
+#textarea:active {
+  outline: none !important;
+  border-color: black;
+  box-shadow: 0 0 0px black;
 }
 
-#copyButton{
+button {
+  width: 11.6rem;
+  box-shadow: none !important;
+}
+
+#copyButton {
   cursor: pointer;
   color: black;
-
 }
 
-#copyButton:hover + #copy{
+#copyButton:hover + #copy {
   background-color: #00000000;
   display: inline-block;
-    
 }
 
 /* hover show text */
-#copy{
+#copy {
   display: none;
   padding-left: 0.5%;
   background-color: #00000000;
