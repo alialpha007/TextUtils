@@ -117,10 +117,10 @@ function TextForm(props) {
     if (text === "") {
       alert("Kindly enter text!", "danger");
     } else {
-      let text = document.getElementById("textarea");
-      text.select();
-      text.setSelectionRange(0, 9999);
-      navigator.clipboard.writeText(text.value);
+      // let text = document.getElementById("textarea");
+      // text.select();
+      navigator.clipboard.writeText(text);
+      // document.getSelection().removeAllRanges();
       alert("Text is Copied!", "warning");
     }
   };
@@ -139,7 +139,7 @@ function TextForm(props) {
             className="text-center"
             style={{ color: mode === "primary" ? "dark" : "#2C3333" }}
           >
-            Enter text to analyze
+            TextUtils - Word Counter & Text Editor
           </h2>
           <Form.Group
             className="card-body"
@@ -281,7 +281,7 @@ function TextForm(props) {
           {
             text
               .trim()
-              .split(" ")
+              .split(/\s+/)
               .filter((word) => {
                 return word !== "";
               }).length
@@ -305,7 +305,7 @@ function TextForm(props) {
         }}
       >
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text === "" ? "Nothing to preview..." : text}</p>
       </div>
     </>
   );

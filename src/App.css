@@ -160,23 +160,21 @@ section > h1 {
   letter-spacing: 0.05em;
   font-family: "Open Sans";
 }
+#btn {
+  width: 10rem;
+  height: 40px;
+}
 
-@media only screen and (max-width: 500px) {
-  .masthead {
-    padding: 3em 0;
-  }
-  .masthead-heading {
-    font-size: 3em;
-  }
-  .intro,
-  .where-Im-from,
-  .more-about-me,
-  .content-footer {
-    font-size: 0.5em;
-  }
+#toggle {
+  width: 3.5rem;
 }
 
 @media only screen and (max-width: 500px) {
+  #btn {
+    width: 35%;
+    height: 40px;
+  }
+
   .masthead {
     padding: 3em 0;
   }

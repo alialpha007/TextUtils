@@ -16,6 +16,7 @@ function NavigationBar(props) {
             TextUtils
           </Link>
           <Navbar.Toggle
+            id="toggle"
             aria-controls="basic-navbar-nav"
             className={`bg-white text-${mode}`}
           />

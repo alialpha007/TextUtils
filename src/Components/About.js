@@ -59,7 +59,8 @@ function About(props) {
         </div>
         <div className="d-flex justify-content-center">
           <Button
-            className=" m-2 w-25"
+            id="btn"
+            className=" m-2 "
             variant="dark"
             href={resume}
             download="CV-ALI-WEB-DEVELOPMENT.pdf"
@@ -68,7 +69,8 @@ function About(props) {
           </Button>
 
           <a
-            className="btn btn-dark text-decoration-none m-2 w-25 "
+            id="btn"
+            className="btn btn-dark text-decoration-none m-2 "
             href="https://github.com/alialpha007"
             target="_blank"
             rel="noopener noreferrer"
