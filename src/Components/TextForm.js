@@ -4,28 +4,38 @@ import Button from "react-bootstrap/Button";
 
 function TextForm(props) {
   let mode = props.mode;
+  let alert = props.showAlert;
 
   // Here setText will set the new value to the text
   const [text, setText] = useState("");
-  const [copy, setcopy] = useState("copy");
 
   const handleOnChangeText = (e) => {
     setText(e.target.value);
   };
 
   const handleOnClickUpperCase = () => {
-    let upperCaseText = text.toUpperCase();
-    setText(upperCaseText);
+    if (text === "") {
+      alert("Kindly enter text!", "danger");
+    } else {
+      let upperCaseText = text.toUpperCase();
+      setText(upperCaseText);
+      alert("Text is Converted to Uppercase!", "warning");
+    }
   };
 
   const handleOnClickLowerCase = () => {
-    let upperCaseText = text.toLowerCase();
-    setText(upperCaseText);
+    if (text === "") {
+      alert("Kindly enter text!", "danger");
+    } else {
+      let upperCaseText = text.toLowerCase();
+      setText(upperCaseText);
+      alert("Text is Converted to Lowercase!", "warning");
+    }
   };
 
   const handleOnClickTitle = () => {
     if (text === "") {
-      alert("Text must be filled out");
+      alert("Kindly enter text!", "danger");
     } else {
       let titleCase = text
         .split(" ")
@@ -35,53 +45,90 @@ function TextForm(props) {
         .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
         .join(" ");
       setText(titleCase);
+      alert("Text is Converted to Title Case!", "warning");
     }
   };
 
   const handleOnClickSentence = () => {
-    let sentenceCase = text
-      .toLowerCase()
-      .replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, (s) =>
-        s.replace(/([a-z])/, (s) => s.toUpperCase())
-      );
-    setText(sentenceCase);
+    if (text === "") {
+      alert("Kindly enter text!", "danger");
+    } else {
+      let sentenceCase = text
+        .toLowerCase()
+        .replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, (s) =>
+          s.replace(/([a-z])/, (s) => s.toUpperCase())
+        );
+      setText(sentenceCase);
+      alert("Text is Converted to Sentence Case!", "warning");
+    }
   };
 
   const handleOnClickClear = () => {
-    setText("");
+    if (text === "") {
+      alert("Kindly enter text!", "danger");
+    } else {
+      setText("");
+      alert("Text is Cleared!", "warning");
+    }
   };
 
   const handleOnClickStartSpeech = () => {
-    let speech = new SpeechSynthesisUtterance();
-    speech.lang = "en-US";
-    speech.text = text;
-    speech.rate = 0.9;
-    speech.pitch = 1;
-    window.speechSynthesis.speak(speech);
+    if (text === "") {
+      alert("Kindly enter text!", "danger");
+    } else {
+      let speech = new SpeechSynthesisUtterance();
+      speech.lang = "en-US";
+      speech.text = text;
+      speech.rate = 0.9;
+      speech.pitch = 1;
+      window.speechSynthesis.speak(speech);
+      alert("Speech is started!", "warning");
+    }
   };
   const handleOnClickPauseSpeech = () => {
-    let speech = new SpeechSynthesisUtterance();
-    window.speechSynthesis.pause(speech);
+    if (text === "") {
+      alert("Kindly enter text!", "danger");
+    } else {
+      let speech = new SpeechSynthesisUtterance();
+      window.speechSynthesis.pause(speech);
+      alert("Speech is paused!", "warning");
+    }
   };
   const handleOnClickResumeSpeech = () => {
-    let speech = new SpeechSynthesisUtterance();
-    window.speechSynthesis.resume(speech);
+    if (text === "") {
+      alert("Kindly enter text!", "danger");
+    } else {
+      let speech = new SpeechSynthesisUtterance();
+      window.speechSynthesis.resume(speech);
+      alert("Speech is resumed!", "warning");
+    }
   };
   const handleOnClickCancelSpeech = () => {
-    let speech = new SpeechSynthesisUtterance();
-    window.speechSynthesis.cancel(speech);
+    if (text === "") {
+      alert("Kindly enter text!", "danger");
+    } else {
+      let speech = new SpeechSynthesisUtterance();
+      window.speechSynthesis.cancel(speech);
+      alert("Speech is canceled!", "warning");
+    }
   };
 
   const handleOnClickCopy = () => {
-    let text = document.getElementById("textarea");
-    text.select();
-    text.setSelectionRange(0, 9999);
-    navigator.clipboard.writeText(text.value);
+    if (text === "") {
+      alert("Kindly enter text!", "danger");
+    } else {
+      let text = document.getElementById("textarea");
+      text.select();
+      text.setSelectionRange(0, 9999);
+      navigator.clipboard.writeText(text.value);
+      alert("Text is Copied!", "warning");
+    }
   };
 
   return (
     <>
       <div
+        id="form"
         style={{ backgroundColor: mode === "primary" ? "white" : "#395B64" }}
       >
         <Form

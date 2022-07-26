@@ -2,6 +2,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavigationBar(props) {
   let mode = props.mode;
@@ -11,9 +12,9 @@ function NavigationBar(props) {
     <div>
       <Navbar style={{ backgroundColor: "#2C3333" }} expand="sm lg">
         <Container className="m-0">
-          <Navbar.Brand className="text-white" href="#home">
+          <Link className="text-white navbar-brand" to="/">
             TextUtils
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             className={`bg-white text-${mode}`}
@@ -21,12 +22,12 @@ function NavigationBar(props) {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link className="text-white" href="#home">
+              <Link className="text-white nav-link" to="/">
                 Home
-              </Nav.Link>
-              <Nav.Link className="text-white" href="#about">
+              </Link>
+              <Link className="text-white nav-link" to="/about">
                 About
-              </Nav.Link>
+              </Link>
 
               <span className="d-flex mx-2">
                 <span

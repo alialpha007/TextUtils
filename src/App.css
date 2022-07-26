@@ -1,4 +1,9 @@
 /* remove outline of text area box */
+/* colors palette i use */
+/* 1- #2C3333
+2- #395B64
+3- #A5C9CA
+4- #E7F6F2 */
 
 #textarea:focus,
 #textarea:active {
@@ -28,4 +33,50 @@ button {
   padding-left: 0.5%;
   background-color: #00000000;
   color: rgb(168, 168, 168);
+}
+
+#form {
+  margin-top: 70px;
+}
+
+#link {
+  text-decoration: none;
+  color: black;
+  margin-top: 9px;
+  margin-left: 10px;
+}
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Arvo", serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+.contant_box_404 {
+  margin-top: -50px;
 }
