@@ -63,7 +63,7 @@ function About(props) {
             className=" m-2 "
             variant="dark"
             href={resume}
-            download="CV-ALI-WEB-DEVELOPMENT.pdf"
+            download="CV-Muhammad Ali-WEB DEVELOPMENT.pdf"
           >
             Download CV
           </Button>
