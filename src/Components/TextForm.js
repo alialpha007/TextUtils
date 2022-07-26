@@ -109,7 +109,7 @@ function TextForm(props) {
     } else {
       let speech = new SpeechSynthesisUtterance();
       window.speechSynthesis.cancel(speech);
-      alert("Speech is canceled!", "warning");
+      alert("Speech is stopped!", "warning");
     }
   };
 
@@ -262,7 +262,7 @@ function TextForm(props) {
               onClick={handleOnClickCancelSpeech} //Event handling
               style={{ backgroundColor: "#6c8181", color: "white", border: 0 }}
             >
-              Cancel Speech
+              Stop Speech
             </Button>
           </div>
         </Form>
@@ -312,17 +312,3 @@ function TextForm(props) {
 }
 
 export default TextForm;
-
-{
-  /* <div className="container m-5 p-3 card">
-      <h2>Text Summary</h2>                                                     
-      <p>Number of Words: {text.split(" ").length === 1 || text === " " || text === "  " || text === "   " || text === "    " ?  text.split(" ").length = 0
-                                : text.trim().split(" ").length = text.trim().split(" ").length }</p>
-      <p>Number of Characters (no spaces): {text.replace(/ /g,'').length }</p>
-      <p>Number of Characters (with spaces): {text.length }</p>
-      
-      <p>Reading time: ~ {Math.floor(0.008 * text.split(" ").length)} 
-                         {Math.floor(0.008 * text.split(" ").length) > 1 ? " minutes " : " minute " }
-        </p>
-    </div>  */
-}

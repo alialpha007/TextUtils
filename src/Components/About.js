@@ -1,7 +1,5 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import jsPDF from "jspdf";
-import { Link } from "react-router-dom";
 import resume from "../data/cv.pdf";
 function About(props) {
   let mode = props.mode;
@@ -73,7 +71,7 @@ function About(props) {
             className="btn btn-dark text-decoration-none m-2 w-25 "
             href="https://github.com/alialpha007"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Github
           </a>

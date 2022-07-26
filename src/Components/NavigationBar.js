@@ -44,6 +44,7 @@ function NavigationBar(props) {
                     type="checkbox"
                     role="switch"
                     id="flexSwitchCheckDefault"
+                    aria-checked
                     onClick={toggle}
                   />
                   <label
