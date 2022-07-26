@@ -144,7 +144,7 @@ function TextForm(props) {
               color: mode === "primary" ? "dark" : "#2C3333",
             }}
           >
-            TextUtils - Word Counter & Text Editor
+            TextUtils - Word Counter & Text to Speech
           </h2>
           <Form.Group
             className="card-body"
