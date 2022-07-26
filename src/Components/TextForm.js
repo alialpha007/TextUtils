@@ -48,7 +48,6 @@ function TextForm(props) {
       alert("Text is Converted to Title Case!", "warning");
     }
   };
-
   const handleOnClickSentence = () => {
     if (text === "") {
       alert("Kindly enter text!", "danger");
@@ -129,15 +128,21 @@ function TextForm(props) {
     <>
       <div
         id="form"
-        style={{ backgroundColor: mode === "primary" ? "white" : "#395B64" }}
+        style={{
+          backgroundColor: mode === "primary" ? "white" : "#395B64",
+        }}
       >
         <Form
           className="form card m-5 p-3"
-          style={{ backgroundColor: mode === "primary" ? "white" : "#A5C9CA" }}
+          style={{
+            backgroundColor: mode === "primary" ? "white" : "#A5C9CA",
+          }}
         >
           <h2
             className="text-center"
-            style={{ color: mode === "primary" ? "dark" : "#2C3333" }}
+            style={{
+              color: mode === "primary" ? "dark" : "#2C3333",
+            }}
           >
             TextUtils - Word Counter & Text Editor
           </h2>
@@ -181,7 +186,9 @@ function TextForm(props) {
 
             <span
               id="copy"
-              style={{ color: mode === "primary" ? "dark" : "#2C3333" }}
+              style={{
+                color: mode === "primary" ? "dark" : "#2C3333",
+              }}
             >
               copy
             </span>
@@ -191,7 +198,10 @@ function TextForm(props) {
             <Button
               className="m-2 w-30"
               onClick={handleOnClickUpperCase} //Event handling
-              style={{ backgroundColor: "#2C3333", border: 0 }}
+              style={{
+                backgroundColor: "#2C3333",
+                border: 0,
+              }}
             >
               Uppercase
             </Button>
@@ -200,7 +210,10 @@ function TextForm(props) {
               className=" m-2 w-30"
               variant="primary"
               onClick={handleOnClickLowerCase} //Event handling
-              style={{ backgroundColor: "#2C3333", border: 0 }}
+              style={{
+                backgroundColor: "#2C3333",
+                border: 0,
+              }}
             >
               Lowercase
             </Button>
@@ -209,7 +222,10 @@ function TextForm(props) {
               className=" m-2 text-center w-30"
               variant="primary"
               onClick={handleOnClickTitle} //Event handling
-              style={{ backgroundColor: "#2C3333", border: 0 }}
+              style={{
+                backgroundColor: "#2C3333",
+                border: 0,
+              }}
             >
               Tiltle Case
             </Button>
@@ -218,7 +234,10 @@ function TextForm(props) {
               className=" m-2 text-center w-30"
               variant="primary"
               onClick={handleOnClickSentence} //Event handling
-              style={{ backgroundColor: "#2C3333", border: 0 }}
+              style={{
+                backgroundColor: "#2C3333",
+                border: 0,
+              }}
             >
               Sentence Case
             </Button>
@@ -227,7 +246,10 @@ function TextForm(props) {
               className=" m-2 text-center w-30"
               variant="primary"
               onClick={handleOnClickClear} //Event handling
-              style={{ backgroundColor: "#2C3333", border: 0 }}
+              style={{
+                backgroundColor: "#2C3333",
+                border: 0,
+              }}
             >
               Clear Text
             </Button>
@@ -237,7 +259,11 @@ function TextForm(props) {
             <Button
               className=" m-2 text-center w-30"
               onClick={handleOnClickStartSpeech} //Event handling
-              style={{ backgroundColor: "#6c8181", color: "white", border: 0 }}
+              style={{
+                backgroundColor: "#6c8181",
+                color: "white",
+                border: 0,
+              }}
             >
               Start Speech
             </Button>
@@ -245,14 +271,22 @@ function TextForm(props) {
             <Button
               className=" m-2 text-center w-30"
               onClick={handleOnClickPauseSpeech} //Event handling
-              style={{ backgroundColor: "#6c8181", color: "white", border: 0 }}
+              style={{
+                backgroundColor: "#6c8181",
+                color: "white",
+                border: 0,
+              }}
             >
               Pause Speech
             </Button>
             <Button
               className=" m-2 text-center w-30"
               onClick={handleOnClickResumeSpeech} //Event handling
-              style={{ backgroundColor: "#6c8181", color: "white", border: 0 }}
+              style={{
+                backgroundColor: "#6c8181",
+                color: "white",
+                border: 0,
+              }}
             >
               Resume Speech
             </Button>
@@ -260,7 +294,11 @@ function TextForm(props) {
             <Button
               className=" m-2 text-center w-30"
               onClick={handleOnClickCancelSpeech} //Event handling
-              style={{ backgroundColor: "#6c8181", color: "white", border: 0 }}
+              style={{
+                backgroundColor: "#6c8181",
+                color: "white",
+                border: 0,
+              }}
             >
               Stop Speech
             </Button>

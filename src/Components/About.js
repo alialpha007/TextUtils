@@ -6,18 +6,18 @@ function About(props) {
   return (
     <>
       <div style={{ color: mode === "primary" ? "dark" : "white" }}>
-        <header class="masthead">
-          <p class="masthead-intro">Hi, I'm</p>
-          <h1 class="masthead-heading">Muhammad ALI!</h1>
+        <header className="masthead">
+          <p className="masthead-intro">Hi, I'm</p>
+          <h1 className="masthead-heading">Muhammad ALI!</h1>
         </header>
 
-        <div class="intro">
+        <div className="intro">
           <h1>Introduction</h1>
           <p>
             I'm a future Front End developer who loves{" "}
-            <span class="bold">good design</span>,{" "}
-            <span class="bold">good food</span> and{" "}
-            <span class="bold">good people</span>. I am so excited about
+            <span className="bold">good design</span>,{" "}
+            <span className="bold">good food</span> and{" "}
+            <span className="bold">good people</span>. I am so excited about
             learning that makes interactive webpages and designs.
           </p>
           <p>
@@ -27,16 +27,16 @@ function About(props) {
           </p>
         </div>
 
-        <div class="where-Im-from">
+        <div className="where-Im-from">
           <h1>Where I'm From</h1>
           <p>
             I'm from Pakistan Lahore. Currently I'm stuying{" "}
-            <span class="bold">Bachelors of Computer Science</span> program at
-            COMSATS Lahore.
+            <span className="bold">Bachelors of Computer Science</span> program
+            at COMSATS Lahore.
           </p>
         </div>
 
-        <div class="more-about-me">
+        <div className="more-about-me">
           <h1>More About Me</h1>
           <h2>What are your favorite hobbies?</h2>
           <p>

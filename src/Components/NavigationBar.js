@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 function NavigationBar(props) {
   let mode = props.mode;
   let toggle = props.toggleMode;
-
   return (
     <div>
       <Navbar style={{ backgroundColor: "#2C3333" }} expand="sm lg">
@@ -32,14 +31,14 @@ function NavigationBar(props) {
 
               <span className="d-flex mx-2">
                 <span
-                  class="form-check-label text-light my-2"
-                  for="flexSwitchCheckDefault"
+                  className="form-check-label text-light my-2"
+                  htmlFor="flexSwitchCheckDefault"
                 >
                   &#9788;
                 </span>
-                <span class="form-check form-switch my-2 mx-2">
+                <span className="form-check form-switch my-2 mx-2">
                   <input
-                    class="form-check-input text-bg-black"
+                    className="form-check-input text-bg-black"
                     bg="light"
                     data-onstyle="success"
                     type="checkbox"
@@ -49,8 +48,8 @@ function NavigationBar(props) {
                     onClick={toggle}
                   />
                   <label
-                    class="form-check-label text-light"
-                    for="flexSwitchCheckDefault"
+                    className="form-check-label text-light"
+                    htmlFor="flexSwitchCheckDefault"
                   >
                     &#9790;
                   </label>
