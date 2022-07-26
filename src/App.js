@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import About from "./Components/About";
 import PageNotFound from "./Components/PageNotFound";
+import Footer from "./Components/Footer";
 
 function App() {
   const [mode, setMode] = useState("primary");
@@ -52,10 +53,11 @@ function App() {
             path="/"
             element={<Form mode={mode} showAlert={showAlert} />}
           />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/about" element={<About mode={mode} />} />
           <Route exact path="/not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate replace to="/not-found" />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
